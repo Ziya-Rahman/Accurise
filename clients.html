@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Clients</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid-item .client-name {
+            font-weight: bold;
+            color: #007bff;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:hover {
+            background: #0056b3;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Back Button -->
+<button class="back-button" id="backButton">Back to Home</button>
+
+<!-- Page Heading -->
+<h1 id="heading">Our Clients</h1>
+
+<!-- Client Grid -->
+<div class="grid-container">
+    <div class="grid-item">
+        <div class="client-name">Sri Siddhartha Medical College and Hospital, Tumkur</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Kangaroo Care Hospital, Vijayanagar, Bangalore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Kangaroo Care Hospital, Mysore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Cutis Academy of Cutaneous Sciences, Bangalore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Offspring Women and Child Specialty Hospital, Bangalore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Ovum Women and Child Specialty Hospital, Banashankari, Bangalore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Ovum Hospital Women and Child Specialty Hospital, Banasawadi, Bangalore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Ovum Hospital Women and Child Specialty Hospital, Hosakote, Bangalore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Esha Multi-speciality Hospital LLP, Yelahanka, Bangalore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Mathrushree Nethralaya, Mathikere, Bangalore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">MGA Multi-speciality Hospital, Marathalli, Bangalore</div>
+    </div>
+    <div class="grid-item">
+        <div class="client-name">Bharathi Nursing Home, Basavanagudi, Bangalore</div>
+    </div>
+</div>
+
+<script>
+    // Back button functionality
+    document.getElementById('backButton').addEventListener('click', function() {
+        window.location.href = "index.html"; // Replace with the actual URL of your home page
+    });
+
+    // Heading animation
+    const heading = document.getElementById('heading');
+    heading.style.opacity = 0;
+    let opacity = 0;
+    const fadeInInterval = setInterval(() => {
+        opacity += 0.05;
+        heading.style.opacity = opacity;
+        if (opacity >= 1) {
+            clearInterval(fadeInInterval);
+        }
+    }, 50);
+</script>
+
+</body>
+</html>

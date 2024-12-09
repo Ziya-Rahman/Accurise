@@ -1,0 +1,57 @@
+/* Background with animated gradient */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #0072ff, #00c6ff, #a29bfe, #6c5ce7); /* Gradient colors */
+    background-size: 400% 400%; /* Create animation effect */
+    animation: gradientBackground 10s ease infinite; /* Smooth animation */
+    color: white; /* Default text color for contrast */
+}
+
+/* Background Animation Keyframes */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Add container styling for better readability */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    max-width: 1200px;
+    margin: 40px auto; /* Center the content */
+    color: #333; /* Neutral text color for better contrast */
+}
+
+/* Section headers for better visual focus */
+h2 {
+    text-align: center;
+    color: #0072ff; /* Add some color contrast */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Subtle fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

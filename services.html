@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="sc.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h1 class="section-title">Our Services</h1>
+            <div class="service-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card" onclick="openModal(1)">
+                    <img src="New folder/Screenshot 2024-12-08 202200.png" alt="Accreditation Services">
+                    <h2>Accreditation Services</h2>
+                    <p>NABH accreditation for Hospitals, NABL & CAP accreditation for Labs, ISO 9001 Accreditation.</p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card" onclick="openModal(2)">
+                    <img src="New folder/about-3.jpg" alt="Consultancy Services">
+                    <h2>Consultancy Services</h2>
+                    <p>Hospital Planning, Green Concepts, Solar Installations, Power Audits, Safety Equipment.</p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card" onclick="openModal(3)">
+                    <img src="New folder/Screenshot 2024-12-08 211124.png" alt="Human Resource Management">
+                    <h2>Human Resource Management</h2>
+                    <p>Manpower Recruitment, Training, and Employee Satisfaction Surveys.</p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card" onclick="openModal(4)">
+                    <img src="New folder/Screenshot 2024-12-08 212016.png" alt="Marketing and Branding">
+                    <h2>Marketing and Branding</h2>
+                    <p>Sign Boards, Marketing Brochures, Uniforms, and Hospital Branding.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Section -->
+        <div id="service-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">×</span>
+                <div id="modal-body"></div>
+                <button class="modal-close-button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="SMS.js"></script>
+</body>
+</html>
